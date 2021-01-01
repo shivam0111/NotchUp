@@ -1,4 +1,4 @@
-# NotchUp Interview Assignment
+# NotchUp 
 This is a web app to book trial class on NotchUp education platform
    
 <br>
