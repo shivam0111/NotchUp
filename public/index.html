@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NotchUp-Classes</title>
+
+    <!-- update the version number as needed -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script src="/__/firebase/8.1.1/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="/__/firebase/8.1.1/firebase-analytics.js"></script>
+  
+    <!-- Add Firebase products that you want to use -->
+    <script src="/__/firebase/8.1.1/firebase-auth.js"></script>
+    <script src="/__/firebase/8.1.1/firebase-firestore.js"></script>
+
+    
+  <!-- Initialize Firebase -->
+  <script src="/__/firebase/init.js"></script>
+
+    
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body id="body">
+    <header class="header">
+      <img src="./assets/logo.svg" class="logo" alt="NotchUP logo" draggable="false">
+      <p class="heading">NotchUp Classes</p>
+    </header>
+    <div class="mainContainer">
+      <form class="notchUpForm" id="notchUpForm" onsubmit="send_confirmation_mail(); return false;">
+        <div class="formEntry">
+          <label for="pname">Parent's Name: </label>
+          <input type="text" id="parentName" name="parentName" placeholder="John Wick..." required>
+        </div>
+        <br>
+        <div class="formEntry">
+          <label for="lname">Parent's Contact Number: </label>
+          <input type="number" id="parentContact" name="parentContact" placeholder="999854789...">
+        </div>
+        <br>
+        <div class="formEntry">
+          <label for="lname">Parent's Email ID: </label>
+          <input type="email" id="parentEmail" name="parentEmail" placeholder="johXXX@gmail.com" required>
+        </div>
+        <br>
+        <div class="formEntry">
+          <label for="lname">Child's Name: </label>
+          <input type="text" id="studentName" name="studentName" placeholder="Junior Wic..." required>
+        </div>
+        <br>
+        <div class="formEntry">
+          <label for="lname">Child's Age: </label>
+          <input type="number" id="studentAge" name="studentAge" placeholder="15..">
+        </div>
+        <br>
+        <div class="formEntry">
+          <label for="lname">Course Name: </label>
+          <select name="courses" id="courses" onChange='get_class_slots(this.value);'>
+          </select>
+        </div>
+        </br>
+        <div class="formEntry">
+          <label for="lname">Date for the class: </label>
+          <select type="text" id="date" onChange='show_available_class_time(this.value);' placeholder="xx/xx/xxxx">
+          </select>
+        </div>
+        </br>
+        <div class="formEntry">
+          <label for="lname">Time Slot for the class: </label>
+          <select type="text" id="time" name="classTime" placeholder="xx:xx">
+          </select>
+        </div>
+        </br>
+        <div class="formEntry">
+          <p>* Each trial class duration is 1 hour</p>
+        </div>
+        <div class="formEntry">
+          <input class="submit" type="submit" value="Book Class">
+        </div><br>
+      </form> 
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

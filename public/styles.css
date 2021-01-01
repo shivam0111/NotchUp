@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #333333;
+    color: #e3d3c2;
+    letter-spacing: 0.7px;
+    word-spacing: 2.3px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: lighter;
+    font-size: 20px;
+    user-select: none;
+}
+
+.header{
+    display: flex;
+    width: 100%;
+    flex-flow: row wrap;
+    align-items: center;
+}
+.logo{
+    width: 65px;
+    margin-left: 100px;
+    margin-top: 15px;
+}
+.heading{
+    margin-left: 50px;
+    font-size: 35px;
+}
+
+select{
+    margin-left: 8px;
+    margin-top: 2px;
+    background-color: #5e5d5d;
+    color: #e3d3c2;
+    border-radius: 4.2px;
+    padding: 3px 2px 3px 2px;
+    letter-spacing: 0.7px;
+    word-spacing: 2px;
+    font-size: 18px;
+    border-style: none;
+    cursor: pointer;
+}
+
+.formEntry{
+    display: flex;
+    flex-flow: row wrap;
+}
+label {
+    float: left;
+    margin-right: 8px;
+    width: 275px;
+}
+
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+input{
+    float: right;
+    margin-left: 8px;
+    margin-top: 2px;
+    padding: 3px 2px 3px 7px;
+    background-color: #5e5d5d;
+    color: #e3d3c2;
+    border-radius: 4.2px;
+    border-style: none;
+    font-size: 18px;
+    -moz-appearance:textfield;
+}
+input::placeholder{
+    color: #A69D87;
+    letter-spacing: 0.7px;
+    word-spacing: 2px;
+}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+@-moz-document url-prefix() {
+    input, input::placeholder{
+        padding: 3px 2px 3px 7px;
+    }
+}
+input:hover{
+    filter: brightness(110%);
+}
+input:focus{
+    background-color: #e3d3c2 !important;
+    color: #5e5d5d !important;
+}
+
+
+.mainContainer{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    word-wrap: break-word;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notchUpForm{
+    margin-top: 5%;
+}
+
+.submit{
+    margin-top: 10px;
+    padding: 1% 5% 1% 5%;
+    background-color: #e3d3c2;
+    color: #333333;
+    letter-spacing: 0.7px;
+    word-spacing: 2px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#acknowledgment{
+    position: fixed;
+    left: 20%;
+    top: 45%;
+    font-size: 40px;
+    z-index: 5;
+}
+
+
+
+@media(max-width:500px) {
+    .header{
+        margin-bottom: 20px;
+        margin-top: 15px;
+    }
+    .logo{
+        width: 40px;
+        margin-left: 30px;
+        margin-top: 15px;
+    }
+    .heading{
+        margin-left: 25px;
+        font-size: 25px;
+    }
+    #acknowledgment{
+        left: 12%;
+        top: 48%;
+        font-size: 20px;
+    }
+}
